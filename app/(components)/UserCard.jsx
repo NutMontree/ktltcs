@@ -2,6 +2,7 @@ import DeleteUser from "./DeleteUser";
 import Link from "next/link";
 
 const UserCard = ({ user }) => {
+  // สร้างวันเวลาอัตโนมัติ
   function formatTimestamp(timestamp) {
     const options = {
       year: "numeric",
@@ -11,23 +12,22 @@ const UserCard = ({ user }) => {
       minute: "2-digit",
       hour12: true,
     };
-
     const date = new Date(timestamp);
     const formattedDate = date.toLocaleString("en-US", options);
-
     return formattedDate;
   }
-
+  // สร้างวันเวลาอัตโนมัติ
   const createdDateTime = formatTimestamp(user.createdAt);
 
   return (
     <div className="flex flex-col hover:bg-card-hover bg-card rounded-md shadow-lg p-3 m-2">
-      <div className="flex">
-        <div className="ml-auto">
-          <DeleteUser id={user._id} />
-        </div>
+      
+      <div className="flex ml-auto gap-2">
+        <div className=""><Link href={`/UserPage/${user._id}`} style={{ display: "contents" }}>✏️</Link></div>
+        <div className=""><DeleteUser id={user._id} /></div>
+            
       </div>
-      <Link href={`/UserPage/${user._id}`} style={{ display: "contents" }}>
+      {/* <Link href={`/UserPage/${user._id}`} style={{ display: "contents" }}> */}
         <div className="flex gap-1 mb-1">
           <p>{user.prefix}</p>
           <div className="flex gap-2">
@@ -45,7 +45,8 @@ const UserCard = ({ user }) => {
             <p className="text-xs my-1">วันที่กรอกข้อมูล: {createdDateTime}</p>
           </div>
         </div>
-      </Link>
+      {/* </Link> */}
+
     </div>
   );
 };

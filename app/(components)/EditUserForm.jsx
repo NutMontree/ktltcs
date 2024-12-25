@@ -184,7 +184,7 @@ const EditUserForm = ({ user }) => {
           <div className="pt-4 flex justify-center">
           <input
             type="submit"
-            className="btn max-w-xs bg-red-500 py-4 rounded-lg px-24"
+            className="btn max-w-xs bg-sky-500 py-4 rounded-lg px-24"
             value={EDITMODE ? "Updated" : "Created"}
           />
           </div>

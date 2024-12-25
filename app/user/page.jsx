@@ -1,7 +1,5 @@
 import React from "react";
 import UserCard from "@/app/(components)/UserCard";
-// import { faHome, faTicket } from "@fortawesome/free-solid-svg-icons";
-import Link from "next/link";
 
 const getUsers = async () => {
   try {

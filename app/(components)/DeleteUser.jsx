@@ -19,10 +19,10 @@ const DeleteUser = ({ id }) => {
   return (
     <div
       // icon={faX}
-      className=" text-red-400 hover:cursor-pointer hover:text-red-200"
+      className="text-red-500 hover:cursor-pointer hover:text-red-600"
       onClick={deletUser}
     >
-      Delet
+      ❌ 
     </div>
   );
 };
