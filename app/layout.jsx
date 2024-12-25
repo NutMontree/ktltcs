@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import Nav from "./(components)/Nav";
+import Footer from './(components)/Footer'
 import "@/styles/globals.css";
 export const dynamic = "force-dynamic";
 
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
       >
         <Nav />
         {children}
+        <Footer />
       </body>
     </html>
   );
