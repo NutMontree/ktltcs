@@ -2,7 +2,7 @@ import EditUserForm from "@/app/(components)/EditUserForm";
 
 const getUserById = async (id) => {
   try {
-    const res = await fetch(`http://localhost:3000/api/Users/${id}`, {
+    const res = await fetch(`https://ktltcs.vercel.app/api/Users/${id}`, {
       cache: "no-store",
     });
 

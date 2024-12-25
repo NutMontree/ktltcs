@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const getUsers = async () => {
   try {
-    const res = await fetch("http://localhost:3000/api/Users", {
+    const res = await fetch("https://ktltcs.vercel.app/api/Users", {
       cache: "no-store",
     });
 

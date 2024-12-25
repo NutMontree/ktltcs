@@ -8,7 +8,7 @@ const DeleteUser = ({ id }) => {
   const router = useRouter();
 
   const deletUser = async () => {
-    const res = await fetch(`http://localhost:3000/api/Users/${id}`, {
+    const res = await fetch(`https://ktltcs.vercel.app/api/Users/${id}`, {
       method: "DELETE",
     });
     if (res.ok) {
