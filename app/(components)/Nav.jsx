@@ -10,7 +10,6 @@ const Nav = () => {
             <div className="icon">Home</div>
           </Link>
           <Link href="/UserPage/new">
-            {/* <div icon={faTicket} className="icon"> */}
             <div className="icon">เพิ่มข้อมูล</div>
           </Link>
         </div>

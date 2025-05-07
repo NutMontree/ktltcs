@@ -85,10 +85,17 @@ const EditUserForm = ({ user }) => {
           method="post"
           className="flex flex-col gap-4 w-1/2"
         >
-          <h3 className="text-center pt-2 pb-2 text-xl">{EDITMODE ? "อัพเดทรายการ" : "สร้างรายการใหม่"}</h3>
+          <h3 className="text-center pt-2 pb-2 text-xl">
+            {EDITMODE ? "อัพเดทรายการ" : "สร้างรายการใหม่"}
+          </h3>
 
           <label>คำนำหน้า</label>
-          <select className="border rounded-md px-2 py-1 text-zinc-700" name="prefix" value={formData.prefix} onChange={handleChange}>
+          <select
+            className="border rounded-md px-2 py-1 text-zinc-700"
+            name="prefix"
+            value={formData.prefix}
+            onChange={handleChange}
+          >
             {prefixs?.map((prefix, _index) => (
               <option key={_index} value={prefix}>
                 {prefix}
@@ -116,7 +123,6 @@ const EditUserForm = ({ user }) => {
             required={true}
             value={formData.lastname}
             className="border rounded-md px-2 py-1 text-zinc-700"
-
           />
 
           <label>เบอร์โทรศัพท์</label>
@@ -128,7 +134,6 @@ const EditUserForm = ({ user }) => {
             required={true}
             value={formData.phone}
             className="border rounded-md px-2 py-1 text-zinc-700"
-
           />
 
           <label>ที่อยู่</label>
@@ -139,7 +144,6 @@ const EditUserForm = ({ user }) => {
             required={true}
             value={formData.address}
             className="border rounded-md px-2 py-1 text-zinc-700"
-
           />
 
           <label>อีเมล</label>
@@ -151,7 +155,6 @@ const EditUserForm = ({ user }) => {
             required={true}
             value={formData.email}
             className="border rounded-md px-2 py-1 text-zinc-700"
-
           />
 
           <label>รหัสนักเรียน</label>
@@ -163,7 +166,6 @@ const EditUserForm = ({ user }) => {
             required={true}
             value={formData.studentid}
             className="border rounded-md px-2 py-1 text-zinc-700"
-
           />
 
           <label>แผนกวิชา</label>
@@ -171,7 +173,6 @@ const EditUserForm = ({ user }) => {
             name="department"
             value={formData.department}
             className="border rounded-md px-2 py-1 text-zinc-700"
-
             onChange={handleChange}
           >
             {departments?.map((department, _index) => (
@@ -182,14 +183,12 @@ const EditUserForm = ({ user }) => {
           </select>
 
           <div className="pt-4 flex justify-center">
-          <input
-            type="submit"
-            className="btn max-w-xs bg-sky-500 py-4 rounded-lg px-24"
-            value={EDITMODE ? "Updated" : "Created"}
-          />
+            <input
+              type="submit"
+              className="btn max-w-xs bg-sky-500 py-4 rounded-lg px-24"
+              value={EDITMODE ? "Updated" : "Created"}
+            />
           </div>
-
-
         </form>
       </div>
     </>

@@ -21,13 +21,18 @@ const UserCard = ({ user }) => {
 
   return (
     <div className="flex flex-col hover:bg-card-hover bg-card rounded-md shadow-lg p-3 m-2">
-      
       <div className="flex ml-auto gap-2">
-        <div className=""><Link href={`/UserPage/${user._id}`} style={{ display: "contents" }}>✏️</Link></div>
-        <div className=""><DeleteUser id={user._id} /></div>
-            
+        <div className="">
+          <Link href={`/UserPage/${user._id}`} style={{ display: "contents" }}>
+            ✏️
+          </Link>
+        </div>
+        <div className="">
+          <DeleteUser id={user._id} />
+        </div>
       </div>
       {/* <Link href={`/UserPage/${user._id}`} style={{ display: "contents" }}> */}
+      <Link href={`/ProfileUser/${user._id}`} style={{ display: "contents" }}>
         <div className="flex gap-1 mb-1">
           <p>{user.prefix}</p>
           <div className="flex gap-2">
@@ -45,8 +50,7 @@ const UserCard = ({ user }) => {
             <p className="text-xs my-1">วันที่กรอกข้อมูล: {createdDateTime}</p>
           </div>
         </div>
-      {/* </Link> */}
-
+      </Link>
     </div>
   );
 };

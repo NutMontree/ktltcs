@@ -15,7 +15,6 @@ export async function PUT(req, { params }) {
     const body = await req.json();
     const userData = body.formData;
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const updateUserData = await User.findByIdAndUpdate(id, {
       ...userData,
     });

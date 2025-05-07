@@ -1,7 +1,5 @@
 "use client";
 
-// import { faX } from "@fortawesome/free-solid-svg-icons";
-
 import { useRouter } from "next/navigation";
 
 const DeleteUser = ({ id }) => {
@@ -18,11 +16,10 @@ const DeleteUser = ({ id }) => {
 
   return (
     <div
-      // icon={faX}
       className="text-red-500 hover:cursor-pointer hover:text-red-600"
       onClick={deletUser}
     >
-      ❌ 
+      ❌
     </div>
   );
 };
